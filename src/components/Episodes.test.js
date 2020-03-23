@@ -208,7 +208,6 @@ const episodes = [
 
   test("Episode renders correctly", () => {
     const { queryAllByTestId, rerender } = render(<Episodes episodes={[]} />);
-    // expect(queryAllByTestId("episode")).toStrictEqual([]);
     expect(queryAllByTestId("episode")).toHaveLength(0);
 
     rerender(<Episodes episodes={episodes} />);
