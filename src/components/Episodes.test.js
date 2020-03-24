@@ -207,7 +207,9 @@ const episodes = [
   ];
 
   test("Episode renders correctly", () => {
+    //arrange, act, assert all at once
     const { queryAllByTestId, rerender } = render(<Episodes episodes={[]} />);
+    // Should be empty, because there are no episodes
     expect(queryAllByTestId("episode")).toHaveLength(0);
 
     rerender(<Episodes episodes={episodes} />);
